@@ -4,10 +4,10 @@ on:
 
 jobs:
   code:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
     - name: Clone the code
-    run: echo "cloning the code"
+      run: echo "cloning the code"
   build:
     needs: [code]
     runs-on: ubuntu-latest
@@ -26,6 +26,6 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      -  name: Deploy the code
-         run: echo "deploying the code"
+      - name: Deploy the code
+        run: echo "deploying the code"
   
